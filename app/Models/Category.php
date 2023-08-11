@@ -21,6 +21,6 @@ class Category extends Model implements TranslatableContract
 
     public function meal(): HasMany
     {
-        return $this->hasMany(Meal::class, 'category_id', 'id');
+        return $this->hasMany(Meal::class, 'category_id', 'id')->withTrashed();
     }
 }

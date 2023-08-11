@@ -20,7 +20,7 @@ class Tags extends Model implements TranslatableContract
 
     public function meals(): BelongsToMany
     {
-        return $this->belongsToMany(Meal::class, 'meal_tags', 'tags_id', 'meal_id');
+        return $this->belongsToMany(Meal::class, 'meal_tags', 'tags_id', 'meal_id')->withTrashed();
     }
 
 }

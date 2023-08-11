@@ -20,6 +20,6 @@ class Ingredients extends Model implements TranslatableContract
 
     public function meals(): BelongsToMany
     {
-        return $this->belongsToMany(Meal::class, 'meal_ingredients', 'ingredients_id', 'meal_id');
+        return $this->belongsToMany(Meal::class, 'meal_ingredients', 'ingredients_id', 'meal_id')->withTrashed();
     }
 }
