@@ -9,3 +9,7 @@
 4. `php artisan key:generate`
 5. `php artisan migrate --seed`
 6. `php artisan serve`
+
+## Random delete rows
+1. `cd bash-script`
+2. `./delete-random-rows.sh`
